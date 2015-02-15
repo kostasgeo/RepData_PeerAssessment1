@@ -192,7 +192,7 @@ The values for mean and median were 9354.23 and 10395 repsectively before the fi
 We copy the filled-in data set to a new one and create a new factor variable (dayType) that indicates whether the day of each entry is a weekday or weekend day
 
 ```r
-newdata <- data 
+newdata <- data  
 newdata$dayType <- ifelse(weekdays(as.Date(data$date))
                           %in% c('Saturday', 'Sunday'), "weekend", "weekday")
 ```

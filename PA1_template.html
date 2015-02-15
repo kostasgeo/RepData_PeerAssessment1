@@ -160,7 +160,7 @@ plot(p)</code></pre>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
 <p>We copy the filled-in data set to a new one and create a new factor variable (dayType) that indicates whether the day of each entry is a weekday or weekend day</p>
-<pre class="r"><code>newdata &lt;- data 
+<pre class="r"><code>newdata &lt;- data  
 newdata$dayType &lt;- ifelse(weekdays(as.Date(data$date))
                           %in% c('Saturday', 'Sunday'), &quot;weekend&quot;, &quot;weekday&quot;)</code></pre>
 <p>Then, we make a panel plot containing a time series plot of the 5-minute interval and the average number of steps taken, averaged across all weekday days or weekend days</p>
